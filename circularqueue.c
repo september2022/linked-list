@@ -19,11 +19,7 @@ struct Queue* createQueue(int queuesize)
     queue->array = (int*)malloc(queue->capacity * sizeof(int));
     return queue;
 }
-/*
-int isFull() {
-  if ((front == (rear + 1)) || (front == 0 && rear == SIZE - 1)) return 1;
-  return 0;
-}*/
+
 
 int isFull(struct Queue *q) {
   if ((q->front == (q->rear + 1) % q->capacity)) return 1;
